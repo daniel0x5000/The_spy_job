@@ -4,48 +4,48 @@ user=`cat requisitos/configuracion/.user_not_root.txt`
 source requisitos/0.sh
 
 Title
-echo "[1] Informacion de una Pagina Web/Empresa"
+echo "[1] Website/Company Information"
 echo
-echo "============================================================"
-echo "[1] Identificar la Web y reconocer sus tecnologias""         |"
-echo "------------------------------------------------------------"
-echo "[2] Informacion sobre el propietario de la Web/host""        |"
-echo "------------------------------------------------------------"
-echo "[3] Scaneo del Servidor (Puertos con sus Versiones y SO) y"" |"
-echo " (Servidores Host, DNS, MX, TXT)""                           |"
-echo "------------------------------------------------------------"
-echo "[4] Intentar Extraer Ip Real Web protegidas por Cloudflare"" |"
-echo "------------------------------------------------------------"
-echo "[5] Averiguar el Encriptado SSL de la Web""                  |"
-echo "------------------------------------------------------------"
-echo "[6] Listar todas las URLs del Dominio (Tarda 2/3 minutos)""  |"
-echo "------------------------------------------------------------"
-echo "[7] Extraer Informacion sobre una Web hecha en WordPress ""  |"
-echo "------------------------------------------------------------"
-echo "[8] Extraer Lista de Trabajadores""                          |"
-echo "------------------------------------------------------------"
-echo "[9] Extraer Correos Electronicos y Numeros de Telefono""     |"
-echo "------------------------------------------------------------"
-echo "[10] Extraer todos los Dominios""                            |"
-echo "------------------------------------------------------------"
-echo "[11] Google Dorks""                                          |"
-echo "------------------------------------------------------------"
-echo "[12] Comprobar el Estado de una Web (Ver si esta caida)""    |"
-echo "------------------------------------------------------------"
-echo "[13] Todas las opciones""                                    |"
-echo "------------------------------------------------------------"
-echo "[14] Volver al Menu""                                        |"
-echo "============================================================"
+echo "================================================================"
+echo "[1] Identify the Website and recognize its technologies""        |"
+echo "----------------------------------------------------------------"
+echo "[2] Website/host owner information""                             |"
+echo "----------------------------------------------------------------"
+echo "[3] Server Scan (Ports with their Versions and OS) and""         |"
+echo " (Host, DNS, MX, TXT Servers)""                                  |"
+echo "----------------------------------------------------------------"
+echo "[4] Try to Extract the Real IP of Cloudflare-protected Websites""|"
+echo "----------------------------------------------------------------"
+echo "[5] Check the Website's SSL Encryption""                         |"
+echo "----------------------------------------------------------------"
+echo "[6] List all Domain URLs (Takes 2/3 minutes)""                   |"
+echo "----------------------------------------------------------------"
+echo "[7] Extract Information about a WordPress Website ""             |"
+echo "----------------------------------------------------------------"
+echo "[8] Extract Employee List""                                      |"
+echo "----------------------------------------------------------------"
+echo "[9] Extract Emails and Phone Numbers""                           |"
+echo "----------------------------------------------------------------"
+echo "[10] Extract all Domains""                                       |"
+echo "----------------------------------------------------------------"
+echo "[11] Google Dorks""                                              |"
+echo "----------------------------------------------------------------"
+echo "[12] Check Website Status (See if it is down)""                  |"
+echo "----------------------------------------------------------------"
+echo "[13] All options""                                               |"
+echo "----------------------------------------------------------------"
+echo "[14] Back to Menu""                                              |"
+echo "================================================================"
 echo
-read -p "Elige una opcion: " opc1
+read -p "Choose an option: " opc1
 	case $opc1 in
 			1 )	echo
-				read -p "[*] Dominio/Pagina Web (Ej: web.com): " dominio
+				read -p "[*] Domain/Website (Ex: web.com): " dominio
 				echo
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Identificando la Web y reconociendo las tecnologias que utiliza (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Identifying the Website and recognizing the technologies it uses (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
 				echo "######################################"
-				echo "[☢] Pagina Web: www.$dominio"
+				echo "[☢] Website: www.$dominio"
 				echo "######################################"
 				echo
 				whatweb -v -a 3 www.$dominio
@@ -53,16 +53,16 @@ read -p "Elige una opcion: " opc1
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				;;
 			2 )	echo
-				read -p "[*] Dominio/Pagina Web (Ej: web.com): " dominio
+				read -p "[*] Domain/Website (Ex: web.com): " dominio
 				echo 
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Extrañendo Informacion sobre el propietario del Web/host (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Extracting Information about the Website/host owner (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
-				echo "[*]Registry: hace referencia a la empresa que administra la lista donde se aloja un conjunto de nombres de dominio"
-				echo "[*]Registrant: es el propietario legal del dominio"
-				echo "[*]Registrar: hace uso de un registrador para realizar el registro"
+				echo "[*]Registry: refers to the company that manages the list hosting a set of domain names"
+				echo "[*]Registrant: is the legal owner of the domain"
+				echo "[*]Registrar: uses a registrar to perform the registration"
 				echo
 				echo "######################################"
-				echo "[☢] Pagina Web: www.$dominio"
+				echo "[☢] Website: www.$dominio"
 				echo "######################################"
 				echo
 				whois $dominio -H
@@ -70,63 +70,63 @@ read -p "Elige una opcion: " opc1
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				;;
 			3 )	echo
-				read -p "[*] Dominio/Pagina Web (Ej: web.com): " dominio
+				read -p "[*] Domain/Website (Ex: web.com): " dominio
 				echo 
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Scaneo del Servidor (Puertos con sus Versiones y SO) y (Servidores Host, DNS, MX, TXT) (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Server Scan (Ports with their Versions and OS) and (Host, DNS, MX, TXT Servers) (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
 				echo "######################################"
-				echo "[☢] Pagina Web: www.$dominio"
+				echo "[☢] Website: www.$dominio"
 				echo "######################################"
 				echo
 				ip="`curl -s "http://ip-api.com/line/$dominio?fields=query"`"
-				echo "[*] IP Servidor: " `curl -s "http://ip-api.com/line/$dominio?fields=query"`
+				echo "[*] Server IP: " `curl -s "http://ip-api.com/line/$dominio?fields=query"`
 				echo
-				echo "[*] ISP (Proveedor de Servicios en Internet): " `curl -s "http://ip-api.com/line/$dominio?fields=isp"`
+				echo "[*] ISP (Internet Service Provider): " `curl -s "http://ip-api.com/line/$dominio?fields=isp"`
 				echo
-				echo "[*] Continente: " `curl -s "http://ip-api.com/line/$dominio?fields=continent"`
+				echo "[*] Continent: " `curl -s "http://ip-api.com/line/$dominio?fields=continent"`
 				echo
-				echo "[*] Pais: " `curl -s "http://ip-api.com/line/$dominio?fields=country"`
+				echo "[*] Country: " `curl -s "http://ip-api.com/line/$dominio?fields=country"`
 				echo
-				echo "[*] Ciudad: " `curl -s "http://ip-api.com/line/$dominio?fields=city"`
+				echo "[*] City: " `curl -s "http://ip-api.com/line/$dominio?fields=city"`
 				sleep 1
 				echo
-				echo "1º Escaneo de Puertos usando Naabu (No API): "
+				echo "1st Port Scan using Naabu (No API): "
 				echo "____________________________________________"
 				echo
 				sudo naabu -host $ip -silent -json
 				echo
-				echo "2º Escaneo de Puertos usando Shodan (API): "
+				echo "2nd Port Scan using Shodan (API): "
 				echo "__________________________________________"
 				echo
 				sudo shodan host $ip
 				echo
-				echo "3º Escaneo de Puertos usando ZoomEye (API): "
+				echo "3rd Port Scan using ZoomEye (API): "
 				echo "___________________________________________"
 				echo
 				sudo zoomeye ip $ip
 				echo
-				echo "4º Escaneo de Puertos usando Shodan Web (No API): "
+				echo "4th Port Scan using Shodan Web (No API): "
 				echo "_________________________________________________"
 				echo
-				echo "Abriendo Navegador...."
+				echo "Opening Browser...."
 				sleep 2
 				echo
 				echo
-				echo "/\/\/\/\/\ En caso de usar una VPN es probable que la Opcion 1º de puertos erroneos /\/\/\/\/"
+				echo "/\/\/\/\/\ If using a VPN, Option 1 may return incorrect ports /\/\//\/\/"
 				echo
-				echo "[*] Servidores Host, DNS, MX, TXT (Poner el Dominio en dnsdumpster.com): "
+				echo "[*] Host, DNS, MX, TXT Servers (Enter the Domain at dnsdumpster.com): "
 				su $user -c "firefox 'https://www.shodan.io/host/$ip'" | su $user -c "firefox 'https://dnsdumpster.com'"
 				echo
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				;;
 			4 )	echo
-				read -p "[*] Dominio/Pagina Web (Ej: web.com): " dominio
+				read -p "[*] Domain/Website (Ex: web.com): " dominio
 				echo
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Intentando Extraer Ip Real Web protegidas por Cloudflare gracias a DNSs mal Configurados (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Trying to Extract the Real IP of Cloudflare-protected Websites thanks to misconfigured DNSs (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
 				echo "######################################"
-				echo "[☢] Pagina Web: www.$dominio"
+				echo "[☢] Website: www.$dominio"
 				echo "######################################"
 				echo
 				cd requisitos/Cloudmare
@@ -137,51 +137,51 @@ read -p "Elige una opcion: " opc1
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				;;
 			5 )	echo
-				read -p "[*] Dominio/Pagina Web (Ej: web.com): " dominio
-				read -p "[*] http o https?: " http
+				read -p "[*] Domain/Website (Ex: web.com): " dominio
+				read -p "[*] http or https?: " http
 				echo 
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Averiguando el Encriptado SSL de la Web (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Checking the Website's SSL Encryption (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
 				echo "######################################"
-				echo "[☢] Pagina Web: www.$dominio"
+				echo "[☢] Website: www.$dominio"
 				echo "######################################"
 				echo
 				sudo sslscan $http://$dominio
 				echo
-				echo "Si sale este Error: Invalid target specified, se debe a que la web es http y para llevar escriptado ssl necesita ser https"
+				echo "If you get this Error: Invalid target specified, it is because the site is http and it needs to be https to use SSL encryption"
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				;;
 			6 )	echo
-				read -p "[*] Dominio/Pagina Web (Ej: web.com): " dominio
-				read -p "[*] http o https?: " http
+				read -p "[*] Domain/Website (Ex: web.com): " dominio
+				read -p "[*] http or https?: " http
 				echo
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Listando todas las URLs del Dominio (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Listing all Domain URLs (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
 				echo "######################################"
-				echo "[☢] Pagina Web: www.$dominio"
+				echo "[☢] Website: www.$dominio"
 				echo "######################################"
 				echo
 				sudo echo $http://$dominio | hakrawler > requisitos/resultados/$dominio.txt
-				echo "Urls del Dominio: "
+				echo "Domain URLs: "
 				echo "_________________"
 				sudo cat requisitos/resultados/$dominio.txt
 				echo
 				echo
 				echo "///////////////////////////////////////////////////////////////////////////"
-				echo "El .txt se a guardado en /The_spy_job/requisitos/resultados/$dominio.txt"
+				echo "The .txt file has been saved to /The_spy_job/requisitos/resultados/$dominio.txt"
 				echo "///////////////////////////////////////////////////////////////////////////"
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				;;
 			7 )	echo
-				read -p "[*] Dominio/Pagina Web (Ej: web.com): " dominio
-				read -p "[*] http o https?: " http
+				read -p "[*] Domain/Website (Ex: web.com): " dominio
+				read -p "[*] http or https?: " http
 				echo 
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Extrayendo Informacion sobre una Web hecha en WordPress (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Extracting Information about a WordPress Website (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
 				echo "######################################"
-				echo "[☢] Pagina Web: www.$dominio"
+				echo "[☢] Website: www.$dominio"
 				echo "######################################"
 				echo
 				sudo wpscan --url $http://$dominio --random-user-agent
@@ -189,12 +189,12 @@ read -p "Elige una opcion: " opc1
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				;;
 			8 )	echo
-				read -p "[*] Dominio/Pagina Web (Ej: web.com): " dominio
+				read -p "[*] Domain/Website (Ex: web.com): " dominio
 				echo
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Extrayendo lista de Trabajadores (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Extracting the Employee List (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
 				echo "######################################"
-				echo "[☢] Pagina Web: www.$dominio"
+				echo "[☢] Website: www.$dominio"
 				echo "######################################"
 				echo
 				sudo python3 requisitos/theHarvester/theHarvester.py -d $dominio -l 100 -b linkedin
@@ -202,42 +202,42 @@ read -p "Elige una opcion: " opc1
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				;;
 			 9 )	echo
-				read -p "[*] Dominio/Pagina Web (Ej: web.com): " dominio
-				read -p "[*] http o https?: " http
+				read -p "[*] Domain/Website (Ex: web.com): " dominio
+				read -p "[*] http or https?: " http
 				echo
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Extrayendo los Correos Electronicos y Numeros de Telefono (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Extracting Emails and Phone Numbers (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
 				echo "######################################"
-				echo "[☢] Pagina Web: www.$dominio"
+				echo "[☢] Website: www.$dominio"
 				echo "######################################"
 				echo
 				sudo python3 requisitos/theHarvester/theHarvester.py -d $dominio -l 500 -b bing
 				sudo python3 requisitos/theHarvester/theHarvester.py -d $dominio -l 100 -b google
 				echo
 				sudo echo $http://$dominio | hakrawler > requisitos/resultados/$dominio.txt
-				echo "Correos Electronicos: "
+				echo "Emails: "
 				echo "_____________________"
 				sudo cat requisitos/resultados/$dominio.txt | grep mailto: | cut -c 15-
 				echo
-				echo "Numeros de Telefono: "
+				echo "Phone Numbers: "
 				echo "____________________"
 				sudo cat requisitos/resultados/$dominio.txt | grep tel:+
 				echo
 				echo
 				echo "///////////////////////////////////////////////////////////////////////////"
-				echo "El .txt se a guardado en /The_spy_job/requisitos/resultados/$dominio.txt"
+				echo "The .txt file has been saved to /The_spy_job/requisitos/resultados/$dominio.txt"
 				echo "///////////////////////////////////////////////////////////////////////////"
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				
 				;;
 			 10 )	echo 
-				read -p "[*] Dominio/Pagina Web (Ej: web.com): " dominio
+				read -p "[*] Domain/Website (Ex: web.com): " dominio
 				echo
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Extrayendo los Dominios/Ips (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Extracting Domains/IPs (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
 				echo "######################################"
-				echo "[☢] Pagina Web: www.$dominio"
+				echo "[☢] Website: www.$dominio"
 				echo "######################################"
 				echo
 				sudo python3 requisitos/theHarvester/theHarvester.py -d $dominio -l 500 -b urlscan
@@ -247,45 +247,45 @@ read -p "Elige una opcion: " opc1
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				;;
 			11 )	echo
-				read -p "[*] Dominio/Pagina Web (Ej: web.com): " dominio
+				read -p "[*] Domain/Website (Ex: web.com): " dominio
 				echo
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Buscando las veces que se a publicado en Interner el Nombre de esa Web (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Searching how many times that Website's Name has been published on the Internet (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
 				echo "######################################"
-				echo "[☢] Pagina Web: www.$dominio"
+				echo "[☢] Website: www.$dominio"
 				echo "######################################"
 				echo
-				echo "Abriendo Navegador...."
+				echo "Opening Browser...."
 				sleep 2
 				su $user -c "firefox 'https://www.google.com/search?q=%22$dominio%22'" | su $user -c "firefox 'https://www.google.com/search?q=site%3A$dominio'"
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				;;
 			12 )	echo
-				read -p "[*] Dominio/Pagina Web (Ej: web.com): " dominio
+				read -p "[*] Domain/Website (Ex: web.com): " dominio
 				echo
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Comprobar el Estado de una Web (Ver si esta caida) (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Check Website Status (See if it is down) (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
 				echo "######################################"
-				echo "[☢] Pagina Web: www.$dominio"
+				echo "[☢] Website: www.$dominio"
 				echo "######################################"
 				echo
-				echo "Abriendo Navegador...."
+				echo "Opening Browser...."
 				sleep 2
 				su $user -c "firefox 'https://check-host.net/check-http?host=$dominio'"
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				;;
 			13 )	Title
-				echo "[☢] Obteniendo toda la Informacion de una Pagina Web/Empresa"
+				echo "[☢] Getting all Website/Company Information"
 				echo
-				read -p "[*] Dominio/Pagina Web (Ej: web.com): " dominio
-				read -p "[*] http o https?: " http
+				read -p "[*] Domain/Website (Ex: web.com): " dominio
+				read -p "[*] http or https?: " http
 				echo
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Identificando la Web y reconociendo las tecnologias que utiliza (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Identifying the Website and recognizing the technologies it uses (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
 				echo "######################################"
-				echo "[☢] Pagina Web: www.$dominio"
+				echo "[☢] Website: www.$dominio"
 				echo "######################################"
 				echo
 				whatweb -v -a 3 www.$dominio
@@ -295,14 +295,14 @@ read -p "Elige una opcion: " opc1
 				echo
 				echo
 				echo
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Extrañendo Informacion sobre el propietario del Web/host (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Extracting Information about the Website/host owner (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
-				echo "[*]Registry: hace referencia a la empresa que administra la lista donde se aloja un conjunto de nombres de dominio"
-				echo "[*]Registrant: es el propietario legal del dominio"
-				echo "[*]Registrar: hace uso de un registrador para realizar el registro"
+				echo "[*]Registry: refers to the company that manages the list hosting a set of domain names"
+				echo "[*]Registrant: is the legal owner of the domain"
+				echo "[*]Registrar: uses a registrar to perform the registration"
 				echo
 				echo "######################################"
-				echo "[☢] Pagina Web: www.$dominio"
+				echo "[☢] Website: www.$dominio"
 				echo "######################################"
 				echo
 				whois $dominio -H
@@ -312,51 +312,51 @@ read -p "Elige una opcion: " opc1
 				echo
 				echo
 				echo
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Scaneo del Servidor (Puertos con sus Versiones y SO) y (Servidores Host, DNS, MX, TXT) (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Server Scan (Ports with their Versions and OS) and (Host, DNS, MX, TXT Servers) (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
 				echo "######################################"
-				echo "[☢] Pagina Web: www.$dominio"
+				echo "[☢] Website: www.$dominio"
 				echo "######################################"
 				echo
 				ip="`curl -s "http://ip-api.com/line/$dominio?fields=query"`"
-				echo "[*] IP Servidor: " `curl -s "http://ip-api.com/line/$dominio?fields=query"`
+				echo "[*] Server IP: " `curl -s "http://ip-api.com/line/$dominio?fields=query"`
 				echo
-				echo "[*] ISP (Proveedor de Servicios en Internet): " `curl -s "http://ip-api.com/line/$dominio?fields=isp"`
+				echo "[*] ISP (Internet Service Provider): " `curl -s "http://ip-api.com/line/$dominio?fields=isp"`
 				echo
-				echo "[*] Continente: " `curl -s "http://ip-api.com/line/$dominio?fields=continent"`
+				echo "[*] Continent: " `curl -s "http://ip-api.com/line/$dominio?fields=continent"`
 				echo
-				echo "[*] Pais: " `curl -s "http://ip-api.com/line/$dominio?fields=country"`
+				echo "[*] Country: " `curl -s "http://ip-api.com/line/$dominio?fields=country"`
 				echo
-				echo "[*] Ciudad: " `curl -s "http://ip-api.com/line/$dominio?fields=city"`
+				echo "[*] City: " `curl -s "http://ip-api.com/line/$dominio?fields=city"`
 				sleep 1
 				echo
-				echo "1º Escaneo de Puertos usando Naabu (No API): "
+				echo "1st Port Scan using Naabu (No API): "
 				echo "____________________________________________"
 				echo
 				sudo naabu -host $ip -silent -json
 				echo
-				echo "2º Escaneo de Puertos usando Shodan (API): "
+				echo "2nd Port Scan using Shodan (API): "
 				echo "__________________________________________"
 				echo
 				sudo shodan host $ip
 				echo
-				echo "3º Escaneo de Puertos usando ZoomEye (API): "
+				echo "3rd Port Scan using ZoomEye (API): "
 				echo "___________________________________________"
 				echo
 				sudo zoomeye ip $ip
 				echo
-				echo "4º Escaneo de Puertos usando Shodan Web (No API): "
+				echo "4th Port Scan using Shodan Web (No API): "
 				echo "_________________________________________________"
 				echo
-				echo "Abriendo Navegador (Cuando se finalicen los procesos)...."
+				echo "Opening Browser (When the processes finish)...."
 				#su $user -c "firefox 'https://www.shodan.io/host/$ip'"
 				echo
 				echo
-				echo "/\/\/\/\/\ En caso de usar una VPN es probable que la Opcion 1º de puertos erroneos /\/\/\/\/"
+				echo "/\/\/\/\/\ If using a VPN, Option 1 may return incorrect ports /\/\//\/\/"
 				echo
-				echo "[*] Servidores Host, DNS, MX, TXT (Poner el Dominio en dnsdumpster.com): "
+				echo "[*] Host, DNS, MX, TXT Servers (Enter the Domain at dnsdumpster.com): "
 				echo
-				echo "Abriendo Navegador (Cuando se finalicen los procesos)...."
+				echo "Opening Browser (When the processes finish)...."
 				#su $user -c "firefox 'https://dnsdumpster.com'"
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
@@ -364,10 +364,10 @@ read -p "Elige una opcion: " opc1
 				echo
 				echo
 				echo
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Intentando Extraer Ip Real Web protegidas por Cloudflare gracias a DNSs mal Configurados (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Trying to Extract the Real IP of Cloudflare-protected Websites thanks to misconfigured DNSs (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
 				echo "######################################"
-				echo "[☢] Pagina Web: www.$dominio"
+				echo "[☢] Website: www.$dominio"
 				echo "######################################"
 				echo
 				cd requisitos/Cloudmare
@@ -380,33 +380,33 @@ read -p "Elige una opcion: " opc1
 				echo
 				echo
 				echo
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Averiguando el Encriptado SSL de la Web (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Checking the Website's SSL Encryption (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
 				echo "######################################"
-				echo "[☢] Pagina Web: www.$dominio"
+				echo "[☢] Website: www.$dominio"
 				echo "######################################"
 				echo
 				sudo sslscan $http://$dominio
 				echo
-				echo "Si sale este Error: Invalid target specified, se debe a que la web es http y para llevar escriptado ssl necesita ser https"
+				echo "If you get this Error: Invalid target specified, it is because the site is http and it needs to be https to use SSL encryption"
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				echo
 				echo
 				echo
 				echo
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Listando todas las URLs del Dominio (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Listing all Domain URLs (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
 				echo "######################################"
-				echo "[☢] Pagina Web: www.$dominio"
+				echo "[☢] Website: www.$dominio"
 				echo "######################################"
 				echo
 				sudo echo $http://$dominio | hakrawler > requisitos/resultados/$dominio.txt
-				echo "[#] Urls del Dominio guardadas"
+				echo "[#] Domain URLs saved"
 				echo
 				echo
 				echo "///////////////////////////////////////////////////////////////////////////"
-				echo "El .txt se a guardado en /The_spy_job/requisitos/resultados/$dominio.txt"
+				echo "The .txt file has been saved to /The_spy_job/requisitos/resultados/$dominio.txt"
 				echo "///////////////////////////////////////////////////////////////////////////"
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
@@ -414,10 +414,10 @@ read -p "Elige una opcion: " opc1
 				echo
 				echo
 				echo
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Extrayendo Informacion sobre una Web hecha en WordPress (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Extracting Information about a WordPress Website (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
 				echo "######################################"
-				echo "[☢] Pagina Web: www.$dominio"
+				echo "[☢] Website: www.$dominio"
 				echo "######################################"
 				echo
 				sudo wpscan --url $http://$dominio --random-user-agent
@@ -427,10 +427,10 @@ read -p "Elige una opcion: " opc1
 				echo
 				echo
 				echo
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Extrayendo lista de Trabajadores (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Extracting the Employee List (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
 				echo "######################################"
-				echo "[☢] Pagina Web: www.$dominio"
+				echo "[☢] Website: www.$dominio"
 				echo "######################################"
 				echo
 				sudo python3 requisitos/theHarvester/theHarvester.py -d $dominio -l 100 -b linkedin
@@ -440,27 +440,27 @@ read -p "Elige una opcion: " opc1
 				echo
 				echo
 				echo
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Extrayendo los Correos Electronicos y Numeros de Telefono (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Extracting Emails and Phone Numbers (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
 				echo "######################################"
-				echo "[☢] Pagina Web: www.$dominio"
+				echo "[☢] Website: www.$dominio"
 				echo "######################################"
 				echo
 				sudo python3 requisitos/theHarvester/theHarvester.py -d $dominio -l 500 -b bing
 				sudo python3 requisitos/theHarvester/theHarvester.py -d $dominio -l 100 -b google
 				echo
 				sudo echo $http://$dominio | hakrawler > requisitos/resultados/$dominio.txt
-				echo "Correos Electronicos: "
+				echo "Emails: "
 				echo "_____________________"
 				sudo cat requisitos/resultados/$dominio.txt | grep mailto: | cut -c 15-
 				echo
-				echo "Numeros de Telefono: "
+				echo "Phone Numbers: "
 				echo "____________________"
 				sudo cat requisitos/resultados/$dominio.txt | grep tel:+
 				echo
 				echo
 				echo "///////////////////////////////////////////////////////////////////////////"
-				echo "El .txt se a guardado en /The_spy_job/requisitos/resultados/$dominio.txt"
+				echo "The .txt file has been saved to /The_spy_job/requisitos/resultados/$dominio.txt"
 				echo "///////////////////////////////////////////////////////////////////////////"
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
@@ -468,10 +468,10 @@ read -p "Elige una opcion: " opc1
 				echo
 				echo
 				echo
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Extrayendo los Dominios/Ips (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Extracting Domains/IPs (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
 				echo "######################################"
-				echo "[☢] Pagina Web: www.$dominio"
+				echo "[☢] Website: www.$dominio"
 				echo "######################################"
 				echo
 				sudo python3 requisitos/theHarvester/theHarvester.py -d $dominio -l 500 -b urlscan
@@ -483,13 +483,13 @@ read -p "Elige una opcion: " opc1
 				echo
 				echo
 				echo
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Buscando las veces que se a publicado en Interner el Nombre de esa Web (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Searching how many times that Website's Name has been published on the Internet (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
 				echo "######################################"
-				echo "[☢] Pagina Web: www.$dominio"
+				echo "[☢] Website: www.$dominio"
 				echo "######################################"
 				echo
-				echo "Abriendo Navegador (Cuando se finalicen los procesos)...."
+				echo "Opening Browser (When the processes finish)...."
 				#su $user -c "firefox 'https://www.google.com/search?q=%22$dominio%22'" | su $user -c "firefox 'https://www.google.com/search?q=site%3A$dominio'"
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
@@ -497,13 +497,13 @@ read -p "Elige una opcion: " opc1
 				echo
 				echo
 				echo
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Comprobar el Estado de una Web (Ver si esta caida) (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Check Website Status (See if it is down) (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
 				echo "######################################"
-				echo "[☢] Pagina Web: www.$dominio"
+				echo "[☢] Website: www.$dominio"
 				echo "######################################"
 				echo
-				echo "Abriendo Navegador y Todas las Pestañas...."
+				echo "Opening Browser and All Tabs...."
 				sleep 2
 				su $user -c "firefox 'https://www.shodan.io/host/$ip'" | su $user -c "firefox 'https://dnsdumpster.com'" | su $user -c "firefox 'https://www.google.com/search?q=%22$dominio%22'" | su $user -c "firefox 'https://www.google.com/search?q=site%3A$dominio'" | su $user -c "firefox 'https://check-host.net/check-http?host=$dominio'"
 				echo
@@ -514,19 +514,19 @@ read -p "Elige una opcion: " opc1
 				bash the_spy_job.sh
 				;;
 			* )	echo
-				echo "$RRPLY No es una opcion valida"
+				echo "$RRPLY Not a valid option"
 				sleep 1
 				bash requisitos/1.sh
 	esac
 echo
 echo
 echo "#####################"
-echo "[1] Volver al Menu"
-echo "[2] Volver a ejecutar"
-echo "[3] Salir"
+echo "[1] Back to Menu"
+echo "[2] Run again"
+echo "[3] Exit"
 echo "#####################"
 echo
-read -p "Elige una opcion: " opc2
+read -p "Choose an option: " opc2
 	case $opc2 in
 			1 )	bash the_spy_job.sh
 				;;
@@ -535,5 +535,5 @@ read -p "Elige una opcion: " opc2
 			3 )	exit
 				;;
 			* )	echo
-				echo "$RRPLY No es una opcion valida"
+				echo "$RRPLY Not a valid option"
 	esac

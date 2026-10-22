@@ -4,55 +4,55 @@ user=`cat requisitos/configuracion/.user_not_root.txt`
 source requisitos/0.sh
 
 Title
-echo "[8] Informacion de Video/Canal de YouTube"
+echo "[8] YouTube Video/Channel Information"
 echo
 echo "======================================"
-echo "[1] Informacion de un Video / Canal""  |"
+echo "[1] Video / Channel Information""      |"
 echo "--------------------------------------"
-echo "[2] Estadisticas de un Video / Canal"" |"
+echo "[2] Video / Channel Statistics""       |"
 echo "--------------------------------------"
-echo "[3] Todo (Informacion y Estadisticas)""|"
+echo "[3] All (Information and Statistics)"" |"
 echo "--------------------------------------"
-echo "[4] Volver al Menu""                   |"
+echo "[4] Back to Menu""                     |"
 echo "======================================"
 echo
-read -p "Elige una opcion: " opc1
+read -p "Choose an option: " opc1
 	case $opc1 in
 			1 )	echo
-				read -p "[*] A continuacion pega el Link/URL del Video o Canal de YouTube: " link
+				read -p "[*] Paste the YouTube Video or Channel Link/URL below: " link
 				echo
 				echo "################################################################"
 				echo "[☢] URL: $link"
 				echo "################################################################"
 				echo
-				echo "Abriendo Navegador...."
+				echo "Opening Browser...."
                 echo
 				sleep 2
                 su $user -c "firefox 'https://mattw.io/youtube-metadata/?url=$link&submit=true'"
 
 				;;
 			2 )	echo
-				read -p "[*] A continuacion pega el Link/URL del Video o Canal de YouTube: " link
+				read -p "[*] Paste the YouTube Video or Channel Link/URL below: " link
 				echo
 				echo "################################################################"
 				echo "[☢] URL: $link"
 				echo "################################################################"
 				echo
-				echo "Abriendo Navegador...."
+				echo "Opening Browser...."
                 echo
 				sleep 2
                 su $user -c "firefox 'https://mattw.io/youtube-metadata/bulk?url=$link&submit=true'"
 				;;
 			3 )	echo
-				read -p "[*] A continuacion pega el Link/URL del Video o Canal de YouTube: " link
+				read -p "[*] Paste the YouTube Video or Channel Link/URL below: " link
 				echo
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Extrañendo Informacion de un Video / Canal de YouTube (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Extracting Information from a YouTube Video / Channel (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
 				echo "################################################################"
 				echo "[☢] URL: $link"
 				echo "################################################################"
 				echo
-				echo "Abriendo Navegador (Cuando se finalicen los procesos)...."
+				echo "Opening Browser (When the processes finish)...."
                 echo
 				sleep 2
                 #su $user -c "firefox 'https://mattw.io/youtube-metadata/?url=$link&submit=true'"
@@ -62,13 +62,13 @@ read -p "Elige una opcion: " opc1
 				echo
 				echo
 				echo
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Generando Estadisticas de un Video / Canal de YouTube (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Generating Statistics for a YouTube Video / Channel (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
 				echo "################################################################"
 				echo "[☢] URL: $link"
 				echo "################################################################"
 				echo
-				echo "Abriendo Navegador y Todas las Pestañas...."
+				echo "Opening Browser and All Tabs...."
                 echo
 				sleep 2
                 su $user -c "firefox 'https://mattw.io/youtube-metadata/?url=$link&submit=true'" | su $user -c "firefox 'https://mattw.io/youtube-metadata/bulk?url=$link&submit=true'"
@@ -78,19 +78,19 @@ read -p "Elige una opcion: " opc1
 			4 )	bash the_spy_job.sh
 				;;
 			* )	echo
-				echo "$RRPLY No es una opcion valida"
+				echo "$RRPLY Not a valid option"
 				sleep 1
 				bash requisitos/8.sh
 	esac
 echo
 echo
 echo "#####################"
-echo "[1] Volver al Menu"
-echo "[2] Volver a ejecutar"
-echo "[3] Salir"
+echo "[1] Back to Menu"
+echo "[2] Run again"
+echo "[3] Exit"
 echo "#####################"
 echo
-read -p "Elige una opcion: " opc2
+read -p "Choose an option: " opc2
 	case $opc2 in
 			1 )	bash the_spy_job.sh
 				;;
@@ -99,5 +99,5 @@ read -p "Elige una opcion: " opc2
 			3 )	exit
 				;;
 			* )	echo
-				echo "$RRPLY No es una opcion valida"
+				echo "$RRPLY Not a valid option"
 	esac

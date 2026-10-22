@@ -4,28 +4,28 @@ user=`cat requisitos/configuracion/.user_not_root.txt`
 source requisitos/0.sh
 
 Title
-echo "[5] Informacion de un Email"
+echo "[5] Email Information"
 echo
-echo "=========================================================="
-echo "[1] Informacion de un Email""                              |"
-echo "----------------------------------------------------------"
-echo "[2] Buscar en 121 redes sociales una cuenta con ese Email""|"
-echo "----------------------------------------------------------"
-echo "[3] Comprobar si tiene GitHub y saber su Username""        |"
-echo "----------------------------------------------------------"
-echo "[4] Usar Google Dorks (Ver donde se a publicado el Email)""|"
-echo "----------------------------------------------------------"
-echo "[5] Verificar si el Email existe""                         |"
-echo "----------------------------------------------------------"
-echo "[6] Todo (Info, Verificar Email, 121 redes, Google Dorks)""|"
-echo "----------------------------------------------------------"
-echo "[7] Volver al Menu""                                       |"
-echo "=========================================================="
+echo "=============================================================="
+echo "[1] Email Information""                                        |"
+echo "--------------------------------------------------------------"
+echo "[2] Search 121 social networks for an account with that Email""|"
+echo "--------------------------------------------------------------"
+echo "[3] Check if they have GitHub and find their Username""        |"
+echo "--------------------------------------------------------------"
+echo "[4] Use Google Dorks (See where the Email has been published)""|"
+echo "--------------------------------------------------------------"
+echo "[5] Verify if the Email exists""                               |"
+echo "--------------------------------------------------------------"
+echo "[6] All (Info, Verify Email, 121 networks, Google Dorks)""     |"
+echo "--------------------------------------------------------------"
+echo "[7] Back to Menu""                                             |"
+echo "=============================================================="
 echo
-read -p "Elige una opcion: " opc1
+read -p "Choose an option: " opc1
 	case $opc1 in
 			1 )	echo
-				read -p "[*] Escribe el Correo Electronico del Objetivo [Gmail, Yahoo, Outlook]: " email
+				read -p "[*] Type the Target's Email [Gmail, Yahoo, Outlook]: " email
 				echo
 				echo "######################################"
 				echo "[☢] Email: $email"
@@ -35,16 +35,16 @@ read -p "Elige una opcion: " opc1
 				cat requisitos/resultados/Info-$email.txt
 				echo
 				echo
-				echo "Si la Opcion (suspicious: true) aparece como (true) se debe a; Que no hemos observado esta dirección de correo electrónico en Internet, es un proveedor gratuito y no tiene perfiles en los principales servicios como LinkedIn, Facebook y iCloud. La falta de presencia digital puede indicar simplemente una nueva dirección de correo electrónico, pero suele ser sospechosa."
+				echo "If the (suspicious: true) option appears as (true) it is because; we have not observed this email address on the Internet, it is a free provider and has no profiles on major services like LinkedIn, Facebook and iCloud. The lack of digital presence may simply indicate a new email address, but it is usually suspicious."
 				echo
-				echo "/\/\/\/\/\ A continuacion se va a abrir una Web en la cual le daremos a la lupa y rellenaremos la Captcha /\/\/\/\/"
+				echo "/\/\/\/\/\ A Website will now open where we will click the magnifying glass and fill in the Captcha /\/\//\/\/"
 				echo
-				echo "Abriendo Navegador...."
+				echo "Opening Browser...."
 				sleep 3
 				su $user -c "firefox 'https://epieos.com/?q=$email'"
 				;;
 			2 )	echo
-				read -p "[*] Escribe el Correo Electronico del Objetivo [Gmail, Yahoo, Outlook]: " email
+				read -p "[*] Type the Target's Email [Gmail, Yahoo, Outlook]: " email
 				echo
 				echo "######################################"
 				echo "[☢] Email: $email"
@@ -53,7 +53,7 @@ read -p "Elige una opcion: " opc1
 				sudo holehe --only-used --no-clear $email
 				;;
 			3 )	echo
-				read -p "[*] Escribe el Correo Electronico del Objetivo [Gmail, Yahoo, Outlook]: " email
+				read -p "[*] Type the Target's Email [Gmail, Yahoo, Outlook]: " email
 				echo
 				echo "######################################"
 				echo "[☢] Email: $email"
@@ -61,31 +61,31 @@ read -p "Elige una opcion: " opc1
 				echo
 				sudo python3 requisitos/osgint/osgint.py -e $email
 				echo
-				echo "En el caso de que nos haya devuelto un Username, dentro del Apartado [4] Informacion de una Red Social"
-				echo "tenemos la opcion [6] Informacion + email de una cuenta de GitHub la cual nos devolvera Info de la Cuenta"
+				echo "If it returned a Username, inside Section [4] Social Network Information"
+				echo "we have option [6] GitHub Account Information + email which will return the Account Info"
 				;;
 			4 )	echo
-				read -p "[*] Escribe el correo electronico del Objetivo [Gmail, Yahoo, Outlook]: " email
+				read -p "[*] Type the Target's Email [Gmail, Yahoo, Outlook]: " email
 				echo
 				echo "######################################"
 				echo "[☢] Email: $email"
 				echo "######################################"
 				echo
-				echo "Abriendo Navegador...."
+				echo "Opening Browser...."
 				sleep 2
 				su $user -c "firefox 'https://www.google.com/search?q=%22$email%22'"
 				;;
 			5 )	echo
-				echo "Escriba el Correo Electronico del objetivo a continuacion: "
+				echo "Type the target's Email below: "
 				echo
-				echo "Abriendo Navegador...."
+				echo "Opening Browser...."
 				sleep 2
 				su $user -c "firefox 'https://verify-email.org'"
 				;;
 			6 )	echo
-				read -p "[*] Escribe el correo electronico del Objetivo [Gmail, Yahoo, Outlook]: " email
+				read -p "[*] Type the Target's Email [Gmail, Yahoo, Outlook]: " email
 				echo
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Informacion de un Email (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Email Information (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
 				echo "######################################"
 				echo "[☢] Email: $email"
@@ -94,11 +94,11 @@ read -p "Elige una opcion: " opc1
 				sudo curl -s emailrep.io/$email requisitos/resultados/Info-$email.txt
 				cat requisitos/resultados/Info-$email.txt
 				echo
-				echo "Si la Opcion (suspicious: true) aparece como (true) se debe a; Que no hemos observado esta dirección de correo electrónico en Internet, es un proveedor gratuito y no tiene perfiles en los principales servicios como LinkedIn, Facebook y iCloud. La falta de presencia digital puede indicar simplemente una nueva dirección de correo electrónico, pero suele ser sospechosa."
+				echo "If the (suspicious: true) option appears as (true) it is because; we have not observed this email address on the Internet, it is a free provider and has no profiles on major services like LinkedIn, Facebook and iCloud. The lack of digital presence may simply indicate a new email address, but it is usually suspicious."
 				echo
-				echo "/\/\/\/\/\ A continuacion se va a abrir una Web en la cual le daremos a la lupa y rellenaremos la Captcha /\/\/\/\/"
+				echo "/\/\/\/\/\ A Website will now open where we will click the magnifying glass and fill in the Captcha /\/\//\/\/"
 				echo
-				echo "Abriendo Navegador...."
+				echo "Opening Browser...."
 				sleep 2
 				#su $user -c "firefox 'https://epieos.com/?q=$email'"
 				echo
@@ -107,7 +107,7 @@ read -p "Elige una opcion: " opc1
 				echo
 				echo
 				echo
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Buscar en 121 redes sociales una cuenta con ese Email (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Search 121 social networks for an account with that Email (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
 				echo "######################################"
 				echo "[☢] Email: $email"
@@ -120,7 +120,7 @@ read -p "Elige una opcion: " opc1
 				echo
 				echo
 				echo
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Buscando cuenta de GitHub enlazada a ese email (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Searching for the GitHub account linked to that email (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
 				echo "######################################"
 				echo "[☢] Email: $email"
@@ -128,21 +128,21 @@ read -p "Elige una opcion: " opc1
 				echo
 				sudo python3 requisitos/osgint/osgint.py -e $email
 				echo
-				echo "En el caso de que nos haya devuelto un Username, dentro del Apartado [4] Informacion de una Red Social"
-				echo "tenemos la opcion [6] Informacion + email de una cuenta de GitHub la cual nos devolvera Info de la Cuenta"
+				echo "If it returned a Username, inside Section [4] Social Network Information"
+				echo "we have option [6] GitHub Account Information + email which will return the Account Info"
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				echo
 				echo
 				echo
 				echo
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Usar Google Dorks (Ver donde se a publicado el Email) (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Use Google Dorks (See where the Email has been published) (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
 				echo "######################################"
 				echo "[☢] Email: $email"
 				echo "######################################"
 				echo
-				echo "Abriendo Navegador (Cuando se finalicen los procesos)...."
+				echo "Opening Browser (When the processes finish)...."
 				#su $user -c "firefox 'https://www.google.com/search?q=%22$email%22'"
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
@@ -150,13 +150,13 @@ read -p "Elige una opcion: " opc1
 				echo
 				echo
 				echo
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Verificar si el Email existe (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Verify if the Email exists (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
 				echo "######################################"
 				echo "[☢] Email: $email"
 				echo "######################################"
 				echo
-				echo "Abriendo Navegador y Todas las Pestañas...."
+				echo "Opening Browser and All Tabs...."
 				sleep 2
 				su $user -c "firefox 'https://epieos.com/?q=$email'" | su $user -c "firefox 'https://www.google.com/search?q=%22$email%22'" | su $user -c "firefox 'https://verify-email.org'"
 				echo
@@ -165,19 +165,19 @@ read -p "Elige una opcion: " opc1
 			7 )	bash the_spy_job.sh
 				;;
 			* )	echo
-				echo "$RRPLY No es una opcion valida"
+				echo "$RRPLY Not a valid option"
 				sleep 1
 				bash requisitos/5.sh
 	esac
 echo
 echo
 echo "#####################"
-echo "[1] Volver al Menu"
-echo "[2] Volver a ejecutar"
-echo "[3] Salir"
+echo "[1] Back to Menu"
+echo "[2] Run again"
+echo "[3] Exit"
 echo "#####################"
 echo
-read -p "Elige una opcion: " opc2
+read -p "Choose an option: " opc2
 	case $opc2 in
 			1 )	bash the_spy_job.sh
 				;;
@@ -186,5 +186,5 @@ read -p "Elige una opcion: " opc2
 			3 )	exit
 				;;
 			* )	echo
-				echo "$RRPLY No es una opcion valida"
+				echo "$RRPLY Not a valid option"
 	esac

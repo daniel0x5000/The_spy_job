@@ -14,7 +14,7 @@ function Title {
 	echo "                              __________________________________________________"					
 	echo "                               ︻デ═一  Created by: XDeadHackerX v2.1  ︻デ═一 " 
 	echo "          -------------------------------------------------------------------------------------------"
-	echo "          Cualquier acción y o actividad relacionada con 𝔗𝔥𝔢 𝔰𝔭𝔶'𝔰 𝔧𝔬𝔟 es únicamente su responsabilidad"
+	echo "          Any action and/or activity related to 𝔗𝔥𝔢 𝔰𝔭𝔶'𝔰 𝔧𝔬𝔟 is solely your responsibility"
 	echo "          -------------------------------------------------------------------------------------------" 
 	echo
 	echo
@@ -22,18 +22,18 @@ function Title {
 
 if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
 	Title
-	echo "[0] Instalar y Configurar Requisitos"
+	echo "[0] Install and Configure Requirements"
 	echo
 	echo "================================="
-	echo "[1] Instalar requisitos""         |"
-	echo "[2] Configurar API veriphone.io"" |"
-	echo "[3] Configurar API Shodan""       |"
-	echo "[4] Configurar API ZoomEye""      |"
-	echo "[5] Volver al Menu""              |"
+	echo "[1] Install requirements""        |"
+	echo "[2] Configure veriphone.io API""  |"
+	echo "[3] Configure Shodan API""        |"
+	echo "[4] Configure ZoomEye API""       |"
+	echo "[5] Back to Menu""                |"
 	echo "================================="
 	echo
 	echo
-	read -p "[*] Elige una opcion: " opc1
+	read -p "[*] Choose an option: " opc1
 		case $opc1 in
 				1 )	echo
 					if ! [ -d requisitos/configuracion ]
@@ -41,11 +41,11 @@ if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
 							mkdir requisitos/configuracion
 					fi
 					echo
-					echo "Usuarios del Sistema: " 
+					echo "System Users: " 
 					echo "_____________________"
 					users
 					echo
-					read -p "Escribe de los usuarios que aparecen aqui arriba el que NO TENGA permisos root: " user
+					read -p "Type which of the users listed above does NOT have root permissions: " user
 					echo $user > requisitos/configuracion/.user_not_root.txt
 					
 					if ! [ -d requisitos/resultados ]
@@ -110,41 +110,41 @@ if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
 					cd ..
 					;;
 				2 )	echo
-					read -p "[*] Pegue a continuacion la API de tu de https://veriphone.io: " API1
+					read -p "[*] Paste your API key from https://veriphone.io: " API1
 					echo $API1 > requisitos/configuracion/.api_phone.txt
 					echo
-					echo "Listo"
+					echo "Done"
 					;;
 				3 )	echo
-					read -p "[*] Pegue a continuacion la API de tu cuenta de Shodan.io: " API2
+					read -p "[*] Paste your Shodan.io account API key below: " API2
 					shodan init $API2
 					echo $API2 > requisitos/configuracion/.api_shodan.txt
 					echo
-					echo "Listo"
+					echo "Done"
 					;;
 				4 )	echo
-					read -p "[*] Pegue a continuacion la API de tu cuenta de ZoomEye.org: " API3
+					read -p "[*] Paste your ZoomEye.org account API key below: " API3
 					zoomeye init -apikey $API3
 					echo $API3 > requisitos/configuracion/.api_zoomeye.txt
 					echo
-					echo "Listo"
+					echo "Done"
 					;;
 				5 )	bash the_spy_job.sh
 					;;
 				* )	echo
-					echo "$RRPLY No es una opcion valida"
+					echo "$RRPLY Not a valid option"
 					sleep 1
 					bash requisitos/0.sh
 		esac
 	echo
 	echo
 	echo "#####################"
-	echo "[1] Volver al Menu"
-	echo "[2] Volver a ejecutar"
-	echo "[3] Salir"
+	echo "[1] Back to Menu"
+	echo "[2] Run again"
+	echo "[3] Exit"
 	echo "#####################"
 	echo
-	read -p "Elige una opcion: " opc2
+	read -p "Choose an option: " opc2
 		case $opc2 in
 				1 )	bash the_spy_job.sh
 					;;
@@ -153,6 +153,6 @@ if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
 				3 )	exit
 					;;
 				* )	echo
-					echo "$RRPLY No es una opcion valida"
+					echo "$RRPLY Not a valid option"
 		esac
 fi

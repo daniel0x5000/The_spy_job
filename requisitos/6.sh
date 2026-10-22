@@ -5,92 +5,92 @@ user=`cat requisitos/configuracion/.user_not_root.txt`
 source requisitos/0.sh
 
 Title
-echo "[6] Informacion de un Numero de Telefono"
+echo "[6] Phone Number Information"
 echo
-echo "============================================================="
-echo "[1] Ver la Compañia y el Pais del Numero de Telefono""        |"
-echo "-------------------------------------------------------------"
-echo "[2] Ver si esta registrado en Instagram, Amazon o Snaptchat"" |"
-echo "-------------------------------------------------------------"
-echo "[3] Usar Google Dorks (Ver donde se a publicado el Telefono)""|"
-echo "-------------------------------------------------------------"
-echo "[4] Intentar extraer el nombre real del dueño del Telefono""  |"
-echo "-------------------------------------------------------------"
-echo "[5] Todo (Compañia, Redes, Google Dorks, Nombre del Dueño)""  |"
-echo "-------------------------------------------------------------"
-echo "[6] Volver al Menu""                                          |"
-echo "============================================================="
+echo "==============================================================="
+echo "[1] See the Phone Number's Carrier and Country""                |"
+echo "---------------------------------------------------------------"
+echo "[2] Check if it is registered on Instagram, Amazon or Snapchat""|"
+echo "---------------------------------------------------------------"
+echo "[3] Use Google Dorks (See where the Phone has been published)"" |"
+echo "---------------------------------------------------------------"
+echo "[4] Try to extract the Phone owner's real name""                |"
+echo "---------------------------------------------------------------"
+echo "[5] All (Carrier, Networks, Google Dorks, Owner Name)""         |"
+echo "---------------------------------------------------------------"
+echo "[6] Back to Menu""                                              |"
+echo "==============================================================="
 echo
-read -p "Elige una opcion: " opc1
+read -p "Choose an option: " opc1
 	case $opc1 in
 			1 )	echo
-				read -p "[*] Escribe el Codigo del pais del Telefono del Objetivo (Ej: 34): " codigo
-				read -p "[*] Escribe el Numero de Telefono del Objetivo (Ej: 625295417): " telefono
+				read -p "[*] Type the Target Phone's Country Code (Ex: 34): " codigo
+				read -p "[*] Type the Target's Phone Number (Ex: 625295417): " telefono
 				echo
 				echo "#############################"
-				echo "[☢] Telefono: +$codigo $telefono"
+				echo "[☢] Phone: +$codigo $telefono"
 				echo "#############################"
 				echo
 				curl -s "https://api.veriphone.io/v2/verify?phone=%2B$codigo-$telefono&key=$api" > requisitos/resultados/$telefono.txt
-				echo "[*] Valido: " `cat requisitos/resultados/$telefono.txt | awk -F',' '{print $3}' | cut -c 16-`
-				echo "[*] Pais: " `cat requisitos/resultados/$telefono.txt | awk -F',' '{print $6}' | cut -c 13- | rev | cut -c2- | rev`
-				echo "[*] Compañia: " `cat requisitos/resultados/$telefono.txt | awk -F',' '{print $12}' | cut -c 13- | rev | cut -c3- | rev`
+				echo "[*] Valid: " `cat requisitos/resultados/$telefono.txt | awk -F',' '{print $3}' | cut -c 16-`
+				echo "[*] Country: " `cat requisitos/resultados/$telefono.txt | awk -F',' '{print $6}' | cut -c 13- | rev | cut -c2- | rev`
+				echo "[*] Carrier: " `cat requisitos/resultados/$telefono.txt | awk -F',' '{print $12}' | cut -c 13- | rev | cut -c3- | rev`
 				;;
 			2 )	echo
-				read -p "[*] Escribe el Codigo del pais del Telefono del Objetivo (Ej: 34): " codigo
-				read -p "[*] Escribe el Numero de Telefono del Objetivo (Ej: 62529541): " telefono
+				read -p "[*] Type the Target Phone's Country Code (Ex: 34): " codigo
+				read -p "[*] Type the Target's Phone Number (Ex: 62529541): " telefono
 				echo
 				echo "#############################"
-				echo "[☢] Telefono: +$codigo $telefono"
+				echo "[☢] Phone: +$codigo $telefono"
 				echo "#############################"
 				echo
 				sudo ignorant --only-used --no-clear $codigo $telefono
 				;;
 			3 )	echo
-				read -p "[*] Escribe el Codigo del pais del Telefono del Objetivo (Ej: 34): " codigo
-				read -p "[*] Escribe el Numero de Telefono del Objetivo (Ej: 62529541): " telefono
-				read -p "[*] Palabra clave /Opcional/ (Ej: Nombre, Email, Localizacion, etc): " info
+				read -p "[*] Type the Target Phone's Country Code (Ex: 34): " codigo
+				read -p "[*] Type the Target's Phone Number (Ex: 62529541): " telefono
+				read -p "[*] Keyword /Optional/ (Ex: Name, Email, Location, etc): " info
 				echo
 				echo "#############################"
-				echo "[☢] Telefono: +$codigo $telefono"
+				echo "[☢] Phone: +$codigo $telefono"
 				echo "#############################"
 				echo
-				echo "Abriendo Navegador...."
+				echo "Opening Browser...."
 				sleep 2
 				su $user -c "firefox 'https://www.google.com/search?q=%22+$codigo$telefono%22'" | su $user -c "firefox 'https://www.google.com/search?q=%22+$codigo$telefono%22+$info'"
 				;;
 			4 )	echo
-				echo "A continuacion escribe en la Web el Numero de Telefono, eliga el pais y rellene las captchat que salgan al darle a (Name Lookup)"
+				echo "Next, type the Phone Number on the Website, choose the country and fill in the captchas that appear when you click (Name Lookup)"
 				echo
-				echo "Abriendo Navegador...."
+				echo "Opening Browser...."
 				sleep 3
 				su $user -c "firefox 'https://www.revealname.com'"
 				;;
 			5 )	echo
-				read -p "[*] Escribe el Codigo del pais del Telefono del Objetivo (Ej: 34): " codigo
-				read -p "[*] Escribe el Numero de Telefono del Objetivo (Ej: 62529541): " telefono
-				read -p "[*] Palabra clave /Opcional/ (Ej: Nombre, Email, Localizacion, etc): " info
+				read -p "[*] Type the Target Phone's Country Code (Ex: 34): " codigo
+				read -p "[*] Type the Target's Phone Number (Ex: 62529541): " telefono
+				read -p "[*] Keyword /Optional/ (Ex: Name, Email, Location, etc): " info
 				echo
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Ver la Compañia y el Pais del Numero de Telefono (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) See the Phone Number's Carrier and Country (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
 				echo "#############################"
-				echo "[☢] Telefono: +$codigo $telefono"
+				echo "[☢] Phone: +$codigo $telefono"
 				echo "#############################"
 				echo
 				curl -s "https://api.veriphone.io/v2/verify?phone=%2B$codigo-$telefono&key=$api" > requisitos/resultados/$telefono.txt
-				echo "[*] Valido: " `cat requisitos/resultados/$telefono.txt | awk -F',' '{print $3}' | cut -c 16-`
-				echo "[*] Pais: " `cat requisitos/resultados/$telefono.txt | awk -F',' '{print $6}' | cut -c 12-`
-				echo "[*] Compañia: " `cat requisitos/resultados/$telefono.txt | awk -F',' '{print $12}' | cut -c 12-`
+				echo "[*] Valid: " `cat requisitos/resultados/$telefono.txt | awk -F',' '{print $3}' | cut -c 16-`
+				echo "[*] Country: " `cat requisitos/resultados/$telefono.txt | awk -F',' '{print $6}' | cut -c 12-`
+				echo "[*] Carrier: " `cat requisitos/resultados/$telefono.txt | awk -F',' '{print $12}' | cut -c 12-`
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				echo
 				echo
 				echo
 				echo
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Ver si esta registrado en Instagram, Amazon o Snaptchat (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Check if it is registered on Instagram, Amazon or Snapchat (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
 				echo "#############################"
-				echo "[☢] Telefono: +$codigo $telefono"
+				echo "[☢] Phone: +$codigo $telefono"
 				echo "#############################"
 				echo
 				sudo ignorant --only-used --no-clear $codigo $telefono
@@ -101,13 +101,13 @@ read -p "Elige una opcion: " opc1
 				echo
 				echo
 				echo
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Usar Google Dorks (Ver donde se a publicado el Telefono) (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Use Google Dorks (See where the Phone has been published) (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
 				echo "#############################"
-				echo "[☢] Telefono: +$codigo $telefono"
+				echo "[☢] Phone: +$codigo $telefono"
 				echo "#############################"
 				echo
-				echo "Abriendo Navegador (Cuando se finalicen los procesos)...."
+				echo "Opening Browser (When the processes finish)...."
 				#su $user -c "firefox 'https://www.google.com/search?q=%22+$codigo$telefono%22'"
 				#su $user -c "firefox 'https://www.google.com/search?q=%22+$codigo$telefono%22+$info'"
 				echo
@@ -116,15 +116,15 @@ read -p "Elige una opcion: " opc1
 				echo
 				echo
 				echo
-				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Intentar extraer el nombre real del dueño del Telefono (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
+				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Try to extract the Phone owner's real name (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
 				echo "#############################"
-				echo "[☢] Telefono: +$codigo $telefono"
+				echo "[☢] Phone: +$codigo $telefono"
 				echo "#############################"
 				echo
-				echo "A continuacion escribe en la Web el Numero de Telefono, elige el pais y rellene las captchat que salgan al darle a (Name Lookup)"
+				echo "Next, type the Phone Number on the Website, choose the country and fill in the captchas that appear when you click (Name Lookup)"
 				echo
-				echo "Abriendo Navegador y Todas las Pestañas...."
+				echo "Opening Browser and All Tabs...."
 				sleep 2
 				su $user -c "firefox 'https://www.google.com/search?q=%22+$codigo$telefono%22'" | su $user -c "firefox 'https://www.google.com/search?q=%22+$codigo$telefono%22+$info'" | su $user -c "firefox 'https://www.revealname.com'"
 				echo
@@ -133,19 +133,19 @@ read -p "Elige una opcion: " opc1
 			6 )	bash the_spy_job.sh
 				;;
 			* )	echo
-				echo "$RRPLY No es una opcion valida"
+				echo "$RRPLY Not a valid option"
 				sleep 1
 				bash requisitos/6.sh
 	esac
 echo
 echo
 echo "#####################"
-echo "[1] Volver al Menu"
-echo "[2] Volver a ejecutar"
-echo "[3] Salir"
+echo "[1] Back to Menu"
+echo "[2] Run again"
+echo "[3] Exit"
 echo "#####################"
 echo
-read -p "Elige una opcion: " opc2
+read -p "Choose an option: " opc2
 	case $opc2 in
 			1 )	bash the_spy_job.sh
 				;;
@@ -154,5 +154,5 @@ read -p "Elige una opcion: " opc2
 			3 )	exit
 				;;
 			* )	echo
-				echo "$RRPLY No es una opcion valida"
+				echo "$RRPLY Not a valid option"
 	esac
