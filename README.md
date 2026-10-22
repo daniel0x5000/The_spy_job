@@ -1,8 +1,10 @@
 # 🔍 The spy's job 🔍
 
-[Español](https://github.com/XDeadHackerX/The_spy_job) | [English](https://github.com/SobrioRiot/The_spy_job)
+> **English translation of the original tool by XDeadHackerX** — translated from the Spanish README. All credit for the tool belongs to its creator.
 
-> Herramienta creada por XDeadHackerX
+[Español](https://github.com/XDeadHackerX/The_spy_job) | [English](https://github.com/daniel0x5000/The_spy_job)
+
+> Tool created by XDeadHackerX
 
 <p align="center"><img width="120px" alt="Version" src="https://img.shields.io/badge/version-2.1-blue.svg?style=for-the-badge"/></p>
 
@@ -10,42 +12,42 @@
 
 ---
 
-*Buenas, soy* **XDeadHackerX** *y quiero presentaros mi nueva herramienta llamada* **The_Spy´s_Job**. *Esta Tool está enfocado al* **OSINT** *de casi todos los ámbitos* **(Personas, Nicknames, Redes Sociales, Emails, Números de Teléfono, Páginas Webs, IPs Públicas e Imágenes)** *Mi idea era recopilar y automatizar todas las técnicas de OSINT más Avanzadas posibles en una sola Herramienta y así trabajar de la forma más cómoda y rápida posible, ya que solo tenemos que dar un par de clics y él solo se pondrá a recopilar y mostrar de forma ordenada y clasificada toda la Información. Todos los Apartados están separados por partes por si solo quieres extraer un tipo de información en concreto, pero también cuenta con la penúltima opción que combina todas las Opciones para que saque todo lo que sea capaz del dato que le hemos introducido. Deciros que iré actualizando el repositorio, añadiendo cosas nuevas y solucionando errores. Todas las Técnicas de sustracción de datos e información que aparecen en la Herramienta las he ido estudiando y almacenando durante los últimos 5 años.*
+*Hello, I'm* **XDeadHackerX** *and I want to introduce my new tool called* **The_Spy´s_Job**. *This tool is focused on* **OSINT** *covering almost every field* **(People, Nicknames, Social Networks, Emails, Phone Numbers, Websites, Public IPs and Images)**. *My idea was to gather and automate the most advanced OSINT techniques possible into a single tool, so you can work as comfortably and quickly as possible — you only have to give a couple of clicks and it will collect and display all the information in an organized, classified way on its own. Every section is separated by parts in case you only want to extract one specific type of information, but it also has the second-to-last option that combines all the options to pull everything it can from the data you entered. I'll keep updating the repository, adding new things and fixing bugs. All the data and information extraction techniques in the tool are ones I've been studying and collecting over the last 5 years.*
 <p align="center"> <img width="350px" src="https://i.postimg.cc/258grZf5/world1.webp"></p>
 
-*Os pido por favor que si os ha gustado este gran Proyecto lo apoyéis dándole una* **Estrella** ★, *al final del repositorio también está la opción de invitarme a un café, pero sinceramente me apoyáis más dándole una* **Estrella** ★, *así veré valorado mi esfuerzo en este Proyecto.* **[NO ME HAGO RESPONSABLE DEL MAL USO DE ESTA HERRAMIENTA]**
+*Please, if you liked this great project, support it by giving it a* **Star** ★. *At the bottom of the repository there's also the option to buy me a coffee, but honestly you support me more by giving it a* **Star** ★ — *that way I'll see my effort on this project valued.* **[I AM NOT RESPONSIBLE FOR THE MISUSE OF THIS TOOL]**
 
 ---
 
-## 💡 Funciones 💡
+## 💡 Features 💡
 
-:ballot_box_with_check: **OSINT a Páginas Webs** --> [*WhatWeb, Whois, Scaner de Puertos Avanzado, Información del Servidor, Intentar Extraer IP real de Servidor con CloudFlare, Encriptado SSL, Listar Todas las URLs de un Dominio, Información Web de WordPress, Extraer Trabajadores, Correos Electrónicos y Números de Teléfono, Listar Dominios, Google Dorks, Ping a una Web desde varios Países*]
+:ballot_box_with_check: **OSINT on Websites** --> [*WhatWeb, Whois, Advanced Port Scanner, Server Information, Try to Extract Real IP of CloudFlare-protected Servers, SSL Encryption, List All URLs of a Domain, WordPress Website Information, Extract Employees, Emails and Phone Numbers, List Domains, Google Dorks, Ping a Website from several Countries*]
 
-:ballot_box_with_check: **OSINT a Personas** --> [*Google Dorks, Redes Sociales, Imágenes, Posts, etc*]
+:ballot_box_with_check: **OSINT on People** --> [*Google Dorks, Social Networks, Images, Posts, etc*]
 
-:ballot_box_with_check: **OSINT a Nicknames/Alias** --> [*Google Dorks, Buscar en 574 Redes Sociales una cuenta con ese Nick, Imágenes, Posts*]
+:ballot_box_with_check: **OSINT on Nicknames/Aliases** --> [*Google Dorks, Search 574 Social Networks for an account with that Nick, Images, Posts*]
 
-:ballot_box_with_check: **OSINT a Redes Sociales** --> [*Información de una Cuenta de Instagram/TikTok/Twitter/Twitch/(GitHub + email) = sin tener una cuenta*]
+:ballot_box_with_check: **OSINT on Social Networks** --> [*Information from an Instagram/TikTok/Twitter/Twitch account ((GitHub + email)) = without needing an account*]
 
-:ballot_box_with_check: **OSINT a Emails** --> [*Información de un Email, Verificar la existencia de un Email, Buscar en 121 Redes Sociales una cuenta con ese Email, Buscar Cuenta de GitHub enlazada al Email, Google Dorks*]
+:ballot_box_with_check: **OSINT on Emails** --> [*Email Information, Verify if an Email exists, Search 121 Social Networks for an account with that Email, Find GitHub account linked to the Email, Google Dorks*]
 
-:ballot_box_with_check: **OSINT a Números de Teléfono** --> [*Compañía (ISP), Ver si está registrado en Instagram/Amazon/Snapchat, Google Dorks, Intentar extraer el Nombre del Dueño*]
+:ballot_box_with_check: **OSINT on Phone Numbers** --> [*Carrier (ISP), Check if registered on Instagram/Amazon/Snapchat, Google Dorks, Try to extract the Owner's Name*]
 
-:ballot_box_with_check: **OSINT a IPs Públicas** --> [*Compañía (ISP), Geolocalización de la ciudad exacta, Buscar puertos abiertos con sus servicios/versión, Ping de la Web desde varios Países*]
+:ballot_box_with_check: **OSINT on Public IPs** --> [*Carrier (ISP), Geolocation of the exact city, Find open ports with their services/versions, Ping the Website from several Countries*]
 
-:ballot_box_with_check: **OSINT a Videos/Canales YouTube** --> [**Videos:** *Fecha y Hora de la Publicación, Título, Descripción, URL de la Imagen de la Miniatura (Varios tamaños), Estadísticas (visualizaciones, likes, comentarios y favoritos), Geolocalización (Si la puso), Status, Detalles del Video (Duración, dimensiones, definición, proyección), Categoría del video, Miniaturas.* **Canal:** *Fecha y Hora de la creación del Canal, Título, Descripción, URL de la Imagen de la Miniatura (Varios tamaños), Localización (Si la tiene activada), Estadísticas (Visualizaciones totales de los videos, subscriptores, videos totales), Palabras claves (#), Playlists, Status, Categorías*]
+:ballot_box_with_check: **OSINT on YouTube Videos/Channels** --> [**Videos:** *Publication Date and Time, Title, Description, Thumbnail Image URL (various sizes), Statistics (views, likes, comments and favorites), Geolocation (if set), Status, Video Details (duration, dimensions, definition, projection), Video Category, Thumbnails.* **Channel:** *Channel Creation Date and Time, Title, Description, Thumbnail Image URL (various sizes), Location (if enabled), Statistics (total video views, subscribers, total videos), Keywords (#), Playlists, Status, Categories*]
 
-:ballot_box_with_check: **OSINT a Imágenes** --> [*Metadatos, Motor de Búsqueda de Google, Buscador específico de Imágenes, Ampliar una imagen x4 sin casi perder calidad de la Imagen*]
+:ballot_box_with_check: **OSINT on Images** --> [*Metadata, Google Search Engine, Specific Image Search Engine, Upscale an image x4 with almost no quality loss*]
 
-## 🛠 Instalar Herramienta 🛠
+## 🛠 Install the Tool 🛠
 
-**0)** Instalar y usar la Herramienta con **Root**
+**0)** Install and use the Tool with **Root**
 
 **1)** sudo apt update && apt -y full-upgrade
 
 **2)** sudo apt-get install git
 
-**3)** git clone https://github.com/XDeadHackerX/The_spy_job.git 
+**3)** git clone https://github.com/daniel0x5000/The_spy_job.git
 
 **4)** cd The_spy_job
 
@@ -53,57 +55,57 @@
 
 **6)** bash the_spy_job.sh
 
-**7)** Marcamos la Opción 0 y luego 1 para instalar las dependencias (Solo marcar la primera vez)
+**7)** Select Option 0 and then 1 to install the dependencies (only do this the first time)
 
-**8)** Dentro de la Opción 0 nos encontramos con los apartados 2 y 3 en los cuales podemos configurar 
-dichas APIs gratuitas para sacar el máximo partido a The_spy_job
+**8)** Inside Option 0 you'll find sections 2 and 3 where you can configure
+those free APIs to get the most out of The_spy_job
 
-**9)** Ya podemos disfrutar de la herramienta
+**9)** Now you can enjoy the tool
 
-## 🎲 Tener en Cuenta 🎲
+## 🎲 Keep in Mind 🎲
 
-**[1]** En el Apartado ([0] Instalar y Configurar Requisitos) cuando le demos a la Opción 1 para Instalar los Requisitos nos pedirá que pongamos a un usuario que **no** tenga permisos root, este paso es muy importante, ya que si ponemos a un usuario con permisos root, o lo escribimos mal o lo ponemos doble no funcionarán las Opciones que tengan que abrir un Navegador desde la Terminal.
+**[1]** In Section ([0] Install and Configure Requirements), when you select Option 1 to Install the Requirements, it will ask you to enter a user that does **not** have root permissions. This step is very important — if you enter a user with root permissions, type it wrong, or enter it twice, the options that need to open a Browser from the Terminal won't work.
 
-**[2]** En el Apartado ([0] Instalar y Configurar Requisitos) podemos Configurar la API de veriphone.io, shodan.io y zoomeye.org para sacar el mejor partido de esta Herramienta, las dos son gratuitas.
+**[2]** In Section ([0] Install and Configure Requirements) you can configure the veriphone.io, shodan.io and zoomeye.org APIs to get the best out of this tool; all of them are free.
 
-**[3]** En el Apartado ([7] Información de una IP Pública) con el uso de VPN la mayoría de servidores dan respuestas erróneas sobre sus puertos. Para solventar esto he puesto varios Scanners y 2 de ellos te dan los puertos correctos a pesar de la VPN.
+**[3]** In Section ([7] Public IP Information), when using a VPN most servers return wrong answers about their ports. To work around this I've included several scanners, and 2 of them give you the correct ports despite the VPN.
 
-**[4]** Usar la herramienta con Firefox cerrado, esto se debe a que la herramienta abre múltiples pestañas y si Firefox ya está en ejecución se producir aun error.
+**[4]** Use the tool with Firefox closed — this is because the tool opens multiple tabs, and if Firefox is already running an error will occur.
 
-**[5]** Personalmente recomiendo usar la Herramienta con la Terminal en Pantalla Completa (Gráficamente más bonito).
+**[5]** I personally recommend using the Tool with the Terminal in Full Screen (looks nicer).
 
-**[6]** En caso de que tengas descargada una versión más antigua, te aconsejo borrarla y volver a instalar la herramienta (+requisitos) para solucionar errores y obtener mejoras, que hacen que la herramienta sea mucho mejor que las versiones anteriores.
+**[6]** If you have an older version downloaded, I recommend deleting it and reinstalling the tool (+requirements) to fix bugs and get improvements that make the tool much better than previous versions.
 
-## 🔎 Versiones 🔎
+## 🔎 Versions 🔎
 
 <details>
   <summary>[ v1.0 ]</summary>
-  <p align="justify">[#] Versión Original.</p>
+  <p align="justify">[#] Original Version.</p>
 </details>
 <details>
   <summary>[ v1.1 ]</summary>
-  <p align="justify">[#] Nuevas Opciones en el Apartado [4] llamadas (Información + email de una cuenta de GitHub) y (Información de una cuenta de TikTok), Nueva Opción en el Apartado [1] llamado (Google Dorks), Nuevo Opción en el Apartado [5] Comprobar si tiene GitHub y saber su Username, Reparados los errores de los Apartados 6 y 7, solucionado el Bug al abrir un navegador en el SO Parrot, eliminación de que era la Opción 2 dentro del Apartado 4.</p>
+  <p align="justify">[#] New options in Section [4] called (GitHub account Information + email) and (TikTok account Information), new option in Section [1] called (Google Dorks), new option in Section [5] (Check if they have GitHub and find their Username), fixed bugs in Sections 6 and 7, fixed the bug when opening a browser on Parrot OS, removed what used to be Option 2 inside Section 4.</p>
 </details>
 <details>
   <summary>[ v1.2 ]</summary>
-  <p align="justify">[#] Ampliación de Google Dorks en los Apartados 1, 2 y 6. 1=(Nueva búsqueda, filtra las URLs y fotos de toda la Web), en el Apartado 2 (Permite añadir una palabra clave a la búsqueda para hacerla más avanzada y específica) y por último en el Apartado 6 (También permite añadir una palabra clave a la búsqueda para hacerla más avanzada y específica), Reparación de error que afectaba a la penúltima Opción (Todas las opciones/Todo) de Todos los Apartados el cual cuando lanzaba un Navegador la Herramienta se paraba y no seguía hasta que cerrabas el Navegador.</p>
+  <p align="justify">[#] Expanded Google Dorks in Sections 1, 2 and 6. 1=(New search, filters URLs and photos from the whole Web), in Section 2 (lets you add a keyword to the search to make it more advanced and specific) and finally in Section 6 (also lets you add a keyword to the search to make it more advanced and specific). Fixed a bug affecting the second-to-last option (All options) of every Section, which caused the tool to stop when launching a Browser and not continue until you closed the Browser.</p>
 </details>
 <details>
   <summary>[ v1.3 ]</summary>
-  <p align="justify">[#] Incorporación del famoso Motor de Búsqueda Zoomeye (API) en el Apartado [1] la Opción [3] y en el Apartado [7] la Opción [3], Nuevo Opción en el Apartado [8] llamada [3] Usar Buscador específico, el cual usa un Motor de Búsqueda específico de imágenes, Mejoras visuales, Reparaciones varias.</p>
+  <p align="justify">[#] Added the famous Zoomeye Search Engine (API) in Section [1] Option [3] and in Section [7] Option [3], new option in Section [8] called [3] Use Specific Search Engine, which uses an image-specific Search Engine, visual improvements, various fixes.</p>
 </details>
 <details>
   <summary>[ v2.0 ]</summary>
-  <p align="justify">[#] Nueva Opción en el Apartado 5 llamado ([1] Información de un Email) este nos mostrará información muy interesante, Mejora en el Apartado 4 Opción ([2] Información de una cuenta de Instagram) ahora puedes ver la foto de perfil de una cuenta aunque sea privada, Mejoras en el apartado [4] Información de una Red Social, ahora aparte de abrir la web con información avanzada sobre esa cuenta te muestra el 95% de la información también por Terminal, te mostrara el Nombre (Si lo tiene), el número de Posts, número de publicaciones, seguidores y seguidos, y un link para descargar la Imagen de Perfil, también se a incorpororado la Red Social Telegram, Nueva opción en el Apartado 8 llamado [4] Ampliar una Imagen con calidad, logra ampliar la imagen x4 sin perder apenas calidad, Reparado error que había al abrir dos navegadores dentro de una opción, Mejora visual en el Apartado 6 la opción ([1] Ver la Compañía y el País del Número de Teléfono).</p>
+  <p align="justify">[#] New option in Section 5 called ([1] Email Information) which shows very interesting information, improvement in Section 4 Option ([2] Instagram account Information) — now you can see the profile picture of an account even if it's private, improvements in Section [4] Social Network Information: now, besides opening the website with advanced information about that account, it also shows 95% of the information in the Terminal — it will show you the Name (if it has one), number of Posts, followers and following, and a link to download the Profile Picture. The Telegram social network has also been added. New option in Section 8 called [4] Upscale an Image with quality, which upscales the image x4 with almost no quality loss. Fixed the bug when opening two browsers inside one option. Visual improvement in Section 6 Option ([1] See the Phone Number's Carrier and Country).</p>
 </details>
 <details>
   <summary>[ v2.1 ]</summary>
-  <p align="justify">[#] Nuevo Apartado llamado ([8] Información de un Video/Canal de YouTube) este nuevo apartado es capaz de extraer mucha información interesante de un Video o Canal de YouTube, como puede ser (Videos: Fecha y Hora de la Publicación, Título, Descripción, URL de la Imagen de la Miniatura (Varios tamaños), Estadísticas (visualizaciones, likes, comentarios y favoritos), Geolocalización (Si la puso), Status, Detalles del Video (Duración, dimensiones, definición, proyección), Categoría del video, Miniaturas. Canal: Fecha y Hora de la creación del Canal, Título, Descripción, URL de la Imagen de la Miniatura (Varios tamaños), Localización (Si la tiene activada), Estadísticas (Visualizaciones totales de los videos, subscriptores, videos totales), Palabras claves (#), Playlists, Status, Categorías*), dentro de este apartado también te da la posibilidad de Generar Estadísticas de un Video o un Canal. La mejor parte de este nuevo apartado es que no requiere de una API de YouTube, la parte negativa es que todos estos resultados se tiene que visualizar en un navegador y no por Terminal, a pesar de esto seguiré estudiando la forma de mostrar los resultados por Terminal al igual que en el Apartado 4. En el apartado 4 ahora tambien extrae informacion de las cuentas privadas de Instagram y Twitter, convirtiendose en la primera herramienta gratuita en GitHub en poder extraer esta informacion sin necesidad de API ni cuenta. Limpieza en los resultados de los Apartados 1, 4, 6, se eliminan los caracteres especiales que rodeaban los resultados de dichos apartados. Optimización del código.</p>
+  <p align="justify">[#] New Section called ([8] YouTube Video/Channel Information). This new section can extract lots of interesting information from a YouTube Video or Channel, such as (Videos: Publication Date and Time, Title, Description, Thumbnail Image URL (various sizes), Statistics (views, likes, comments and favorites), Geolocation (if set), Status, Video Details (duration, dimensions, definition, projection), Video Category, Thumbnails. Channel: Channel Creation Date and Time, Title, Description, Thumbnail Image URL (various sizes), Location (if enabled), Statistics (total video views, subscribers, total videos), Keywords (#), Playlists, Status, Categories*). This section also lets you Generate Statistics for a Video or a Channel. The best part of this new section is that it doesn't require a YouTube API; the downside is that all these results have to be viewed in a browser and not in the Terminal — even so, I'll keep studying how to show the results in the Terminal like in Section 4. Section 4 now also extracts information from private Instagram and Twitter accounts, making it the first free tool on GitHub able to extract this information without needing an API or an account. Cleaned up the results of Sections 1, 4 and 6, removing the special characters that surrounded the results of those sections. Code optimization.</p>
 </details>
 
-## ⭐☕ Creado por XDeadHackerX ☕⭐
+## ⭐☕ Created by XDeadHackerX ☕⭐
 
-**Si consideras que este proyecto ha sido útil, te agradecería que me apoyaras dándole una estrella a este repositorio o invitándome a un café.**
+**If you find this project useful, I'd appreciate your support by giving this repository a star or buying me a coffee.**
 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/XDeadHackerX)
 

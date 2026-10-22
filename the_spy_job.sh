@@ -3,19 +3,19 @@
 source requisitos/0.sh
 
 Title
-echo "                                [0] ==>Instalar y Configurar Requisitos<== 🔍"
-echo "                                [1] Informacion de una Pagina Web/Empresa  🔍"
-echo "                                [2] Informacion de una Persona             🔍"
-echo "                                [3] Informacion de un Nickname/Alias/Apodo 🔍"
-echo "                                [4] Informacion de una Red Social          🔍"
-echo "                                [5] Informacion de un Email                🔍"
-echo "                                [6] Informacion de un Numero de Telefono   🔍"
-echo "                                [7] Informacion de una IP Publica          🔍"
-echo "                                [8] Informacion de Video/Canal de YouTube  🔍"
-echo "                                [9] Informacion de una Imagen              🔍"
-echo "                                [99] -------------> Salir"" <--------------- 🔍"
+echo "                                [0] ==>Install and Configure Requirements<== 🔍"
+echo "                                [1] Website/Company Information              🔍"
+echo "                                [2] Person Information                       🔍"
+echo "                                [3] Nickname/Alias Information               🔍"
+echo "                                [4] Social Network Information               🔍"
+echo "                                [5] Email Information                        🔍"
+echo "                                [6] Phone Number Information                 🔍"
+echo "                                [7] Public IP Information                    🔍"
+echo "                                [8] YouTube Video/Channel Information        🔍"
+echo "                                [9] Image Information                        🔍"
+echo "                                [99] -------------> Exit"" <---------------- 🔍"
 echo
-read -p "[*] Elige una opcion: " opc1
+read -p "[*] Choose an option: " opc1
 	case $opc1 in
 			0 )	bash requisitos/0.sh
 				;;
@@ -40,6 +40,6 @@ read -p "[*] Elige una opcion: " opc1
 			99 )	exit
 				;;
 			* )	echo
-				echo "$RRPLY No es una opcion valida"
+				echo "$RRPLY Not a valid option"
 				bash the_spy_job.sh
 	esac
